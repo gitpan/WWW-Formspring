@@ -1,5 +1,11 @@
-use Test::More tests => 37;
-BEGIN { use_ok('WWW::Formspring') };
+use Test::More tests => 43;
+BEGIN { use_ok('Moose'); 
+        use_ok('Carp');
+        use_ok('LWP::UserAgent');
+        use_ok('Net::OAuth'); 
+        use_ok('URI');
+        use_ok('XML::Simple'); 
+        use_ok('WWW::Formspring'); };
 
 my $fs;
 my @test_cases = ( { args => {},

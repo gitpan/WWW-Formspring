@@ -40,7 +40,6 @@ use 5.010001;
 require Exporter;
 
 use Carp;
-use Data::Dumper;
 use LWP::UserAgent;
 use Net::OAuth;
 use URI;
