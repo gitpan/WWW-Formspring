@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               WWW-Formspring
-version:            0.01
+version:            0.02
 abstract:           Perl interface for formspring.me
 author:
     - William Orr <will@worrbase.com>
@@ -10,7 +10,13 @@ configure_requires:
     ExtUtils::MakeMaker:  0
 build_requires:
     ExtUtils::MakeMaker:  0
-requires:  {}
+requires:
+    Carp:            0
+    LWP::UserAgent:  0
+    Moose:           0
+    Net::OAuth:      0
+    URI:             0
+    XML::Simple:     0
 no_index:
     directory:
         - t

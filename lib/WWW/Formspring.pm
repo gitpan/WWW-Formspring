@@ -65,7 +65,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 # Preloaded methods go here.
@@ -749,7 +749,7 @@ sub inbox_respond {
 
 =item inbox_respond($id, $response)
 
-Respond to a question in the authenticated user's inbox. $question must be a WWW::Formspring::Response object, however you can also
+Respond to a question in the authenticated user's inbox. $question must be a WWW::Formspring::Question object, however you can also
 just provide the id of the question and the user's response. Returns 0 on success.
 
 =cut
@@ -873,9 +873,9 @@ This object represents a formspring.me user, and it has the following accessors/
 
 =back
 
-=head1 WWW::Formspring::Response
+=head1 WWW::Formspring::Question
 
-This object represents a formspring.me question/answer, and it has the following accessors/mutators
+This represents a formspring.me question, and has the following accessors/mutators
 
 =over
 
@@ -883,13 +883,29 @@ This object represents a formspring.me question/answer, and it has the following
 
 =item question
 
-=item answer
-
 =item time
 
 =item asked_by
 
 =item asked_to
+
+=item ask
+
+This asks the user in the ask_to field the question. You can fill out a Question object and just call ask on it and it will submit the question.
+
+=back
+
+=head1 WWW::Formspring::Response
+
+This represents a response to a question, and inherits from WWW::Formspring::Question. Additionally it includes the following
+
+=over
+
+=item answer
+
+=item respond
+
+Like the Question object, you can fill out a response object that references a formspring question and a response and then call respond on it to respond to it.
 
 =back
 

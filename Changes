@@ -1,3 +1,42 @@
+commit cc64c8bc619b484a159c168815ff9a132c96cacd
+Author: William Orr <will@worrbase.com>
+Date:   Sat Sep 18 04:59:30 2010 -0400
+
+    Version bump
+
+commit 077a52b7d5ae3c678c9b5ce56f7acf94a695c19b
+Author: William Orr <will@worrbase.com>
+Date:   Sat Sep 18 04:55:23 2010 -0400
+
+    Updated documentation
+    
+    - fixed bug where respond shared method name with answer
+
+commit faa27bd6a32bfc6de80db72acab82d92b0f63877
+Author: William Orr <will@worrbase.com>
+Date:   Sat Sep 18 04:47:13 2010 -0400
+
+    Added Question object
+    
+    - added inheritence from Question object
+    - added Question->ask and Response->answer
+
+commit ddf7e9bc5cdfa631b4c77bee2cdead2597230927
+Author: William Orr <will@worrbase.com>
+Date:   Sat Sep 18 04:35:57 2010 -0400
+
+    Added dependencies in Makefile.PL
+    
+    - version bump for upcoming features
+
+commit c94cd5e4646a30344a515788809d068762511a12
+Author: William Orr <will@worrbase.com>
+Date:   Fri Sep 10 15:38:31 2010 -0400
+
+    Made some basic changes to testing framework
+    
+    - Removed some testing modules from code
+
 commit 3814eecbdf87adf0d3fb53169d749dcfe89bb295
 Author: William Orr <will@worrbase.com>
 Date:   Sun Aug 1 14:19:02 2010 -0400
