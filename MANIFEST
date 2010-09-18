@@ -7,4 +7,5 @@ t/WWW-Formspring-User.t
 lib/WWW/Formspring.pm
 lib/WWW/Formspring/User.pm
 lib/WWW/Formspring/Response.pm
+lib/WWW/Formspring/Question.pm
 META.yml                                 Module meta-data (added by MakeMaker)

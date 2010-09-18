@@ -46,6 +46,7 @@ use URI;
 use XML::Simple;
 
 use WWW::Formspring::User;
+use WWW::Formspring::Question;
 use WWW::Formspring::Response;
 
 $Net::OAuth::PROTOCOL_VERSION = Net::OAuth::PROTOCOL_VERSION_1_0A;

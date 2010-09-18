@@ -1,3 +1,9 @@
+commit 0f6ea000992f1f12d52969f59091ccb44827ac30
+Author: William Orr <will@worrbase.com>
+Date:   Sat Sep 18 05:16:24 2010 -0400
+
+    Added WWW::Formspring::Question to manifest
+
 commit cc64c8bc619b484a159c168815ff9a132c96cacd
 Author: William Orr <will@worrbase.com>
 Date:   Sat Sep 18 04:59:30 2010 -0400
