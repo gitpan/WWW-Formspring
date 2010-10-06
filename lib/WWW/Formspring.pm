@@ -66,7 +66,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 # Preloaded methods go here.
@@ -459,7 +459,8 @@ sub answered_list {
     my ($response, $user);
 
     $username = shift if (@_);
-    $params->{before} = shift if (@_);
+    $params->{max_id} = shift if (@_);
+    $params->{since_id} = shift if (@_);
 
     if (ref($username) eq "WWW::Formspring::User") {
         $response = $self->_unauth_connect("/answered/list/".$username->username.".xml", "GET", $params);
@@ -483,10 +484,13 @@ sub answered_list {
 
 =item answered_list($username)
 
-=item answered_list($username, $before_id)
+=item answered_list($username, $max_id)
+
+=item answered_list($username, $max_id, $since_id)
 
 Gets a list of questions and answers from given (or default) username. Returns an arrayref of WWW::Formspring::Response objects.
-If before_id parameter is provided, it will get all responses from before the given id. Can also take a WWW::Formspring::User object.
+If max_id parameter is provided, it will get all responses from before the given id. Can also take a WWW::Formspring::User object.
+If since_id is also set, it will get only posts after the id passed.
 
 =cut
 
@@ -542,7 +546,8 @@ sub follow_answers {
     my $self = shift;
     my $params = {};
 
-    $params->{before} = shift if (@_);
+    $params->{max_id} = shift if (@_);
+    $params->{since_id} = shift if (@_);
 
     my $response = $self->_auth_connect("/follow/answers.xml", "GET", $params);
     return $response;
@@ -552,10 +557,13 @@ sub follow_answers {
 
 =item follow_answers
 
-=item follow_answers($before_id)
+=item follow_answers($max_id)
+
+=item follow_answers($max_id, $since_id)
 
 Gets all of the questions and answers from the authenticated user's friends. Returns an arrayref of WWW::Formspring::Response objects.
-If $before_id is provided, then it only fetches questions from before the passed in id.
+If $max_id is provided, then it only fetches questions from before the passed in id. If $since_id is also passed in, it will get only
+posts after the post of the id specified.
 
 =cut
 

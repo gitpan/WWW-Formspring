@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               WWW-Formspring
-version:            0.02
+version:            0.03
 abstract:           Perl interface for formspring.me
 author:
     - William Orr <will@worrbase.com>
